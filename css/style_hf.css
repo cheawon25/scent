@@ -1,0 +1,151 @@
+/*웹폰트연결*/
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunKm';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunKm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*스크롤바*/
+body::-webkit-scrollbar {/*스크롤바 전체*/
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb {/*스크롤바 막대*/
+    background-color: #c9ad2f;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+body::-webkit-scrollbar-track {/*스크롤바 막대 외부*/
+    background-color: #faf7ea;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 3px white;
+}
+
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #181c14;}
+.menu a, .lan a{text-decoration: none; color: #fffef8;  text-transform: uppercase;}
+header{width: 100%; height: 80px; box-sizing: border-box; position: absolute;}
+.header_cen{width: 1520px; margin: 0 auto; padding-top: 20px; display: flex; box-sizing: border-box; justify-content: space-between;}
+.logo{width: 130px;}
+.logo_white{display: inline-block;}
+.logo_black{opacity: 0; display: inline-block;}
+.logo a{display: inline-block; position: absolute; width: 130px;}
+.logo a img{width: 100%;}
+.header_cen>.logo:hover .logo_white{opacity: 0;}
+.header_cen>.logo:hover .logo_black{opacity: 1;}
+.menuhover{display: none;}
+.menu{width: 700px; display: flex; margin: 0 auto; font-family: 'ChosunKm'; font-size: 25px; justify-content: space-between; position: relative; padding-top: 5px;}
+.lan{display: flex; padding: 5px 60px 0 0; font-family: 'Chosunilbo_myungjo';}
+.lan li{margin-left: 15px; font-size: 20px;}
+.lan li a:hover{color: #c9ad2f; text-decoration: underline; transition: none;}
+
+
+/*서브메뉴창*/
+#h_hover{width: 100%; height: 160px; background-color: #fffef8; position: absolute; top: 0; left: 0; z-index: 5; display: none;}
+#h_hover>.header_cen>ul>li>a{color: #181c14;}
+.submenu{width: 100%; height: 80px; position: absolute; left: 0; box-sizing: border-box; display: none; font-family: 'Chosunilbo_myungjo';}
+.submenu_cen{width: 550px; margin: 0 auto; padding-top: 45px; font-size: 20px;}
+.submenu_cen a{color: #181c14;}
+.submenu_cen ul{display: flex; justify-content: space-between;}
+.home li{transform: translateX(70px); font-size: 22px;}
+#h_hover>.header_cen>ul>li>a:hover{color: #c9ad2f;}
+#h_hover>.header_cen>ul>li:hover .submenu{display: block;}
+.submenu_cen>ul>li>a:hover{color: #c9ad2f;}
+.underline{width:100%;
+    margin:auto;
+    height: 2px;
+    background:#c9ad2f;
+    visibility:hidden;
+    opacity:0;
+    transform:scaleX(0);
+    transform-origin: left;
+    transition-property:opacity, transform;
+    transition-duration:0.5s;}
+#h_hover>.header_cen>ul>li>a:hover .underline{transform: scaleX(1); opacity: 1; visibility: visible;}
+.submenu_cen>ul>li>a:hover .underline{transform: scaleX(1); opacity: 1; visibility: visible;}
+
+
+/* 스크롤을 내리면 .scroll-menu에 .scroll-fixed가 생겨남 */
+/* scroll-fixed가 생길 때 꾸며주기 */
+.scroll-fixed{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #fffef8;
+    transition: all 0.5s;
+    z-index: 10;
+}
+.scroll-fixed .menu a{
+    color: #181c14;
+    transition: all 0.5s;
+}
+.scroll-fixed .lan a{color: #181c14; transition: all 0.5s;}
+.scroll-fixed input[id="menuicon"]+label span{
+    background: #181c14;
+    transition: all 0.3s;
+}
+.scroll-fixed input[id="menuicon"]:checked+label span{
+	background:#fffef8;
+}
+.scroll-fixed .logo_white{opacity: 0;}
+.scroll-fixed .logo_black{opacity: 1;}
+.scroll-fixed .lan li a:hover{color: #c9ad2f; text-decoration: underline; transition: none;}
+
+/*햄버거버튼 메뉴창*/
+.sidebar a{text-decoration: none; display: block;}
+.sidebar>ul>li>a{font-family: 'ChosunKm'; font-size: 120px; color: #fffef8; line-height: 120px;}
+.sidebar>ul{width: 920px; height: 510px; box-sizing: border-box; margin: 230px auto;}
+.sidebar>ul>li{height: 170px;}
+.solid{width:100%;
+    margin:auto;
+    height:4px;
+    background:#fffef8;
+    visibility:hidden;
+    opacity:0;
+    transform:scaleX(0);
+    transition-property:opacity, transform;
+    transition-duration:0.5s;}
+.sidebar>ul>li:hover .sub{display: block;}
+.sidebar>ul>li>a:hover .solid{transform: scaleX(1); opacity: 1; visibility: visible;}
+.sub{display: none;}
+.sub>li{margin-bottom: 10px;}
+.sub>li>a{font-size: 35px; font-family: 'Chosunilbo_myungjo'; color: #fffef8;}
+.sub>li>a:hover{color: #c9ad2f; text-decoration: underline;}
+.sidebar>ul>li{display: flex; justify-content: space-between;}
+
+/*탑버튼*/
+.top{display: block; position: fixed; z-index: 20; background-color: #fffef8; bottom: 50px; right: 40px; width: 35px; height: 35px; box-sizing: border-box; text-align: center; border-radius: 0 10px 0 10px; font-family: 'SCoreDream';}
+.top p:nth-child(1){font-size: 28px; line-height: 0px; padding-top: 17px;}
+.top p:nth-child(2){font-size: 11px; line-height: 11px; font-weight: 400;}
+.top:hover{color: #fffef8; background-color: #181c14;}
+
+
+/*푸터*/
+footer{width: 100%; height: 280px; background-color: #354724; box-sizing: border-box;}
+#f_center{width: 1520px; height: 280px; margin: 0 auto; box-sizing: border-box; padding: 80px 0 60px; display: flex; justify-content: space-between; color: #fffef8; font-family: 'SCoreDream'; font-weight: 500;}
+.f_left{display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; font-size: 15px; font-weight: 300;}
+.f_right{display: flex; font-size: 14px;}
+.f_right>ul>li{width: 40px; height: 40px; background-color: #fffef8; box-sizing: border-box; border-radius: 10px 5px 10px 5px; padding: 5px;}
+.f_right dl{margin-right: 80px;}
+.f_right dl a{color: #fffef8;}
+.f_right dd{font-weight: 400; text-transform: uppercase; margin-bottom: 2px;}
+.f_right dt{margin-bottom: 10px; text-transform: uppercase; font-size: 15px;}
+.f_right>dl>p{font-weight: 200; line-height: 20px;}
+.f_right>ul>li:nth-child(2){margin: 10px 0;}
+.f_right>dl>dd>a:hover{text-decoration: underline;}
+.f_right>ul>li>a{width: 40px; height: 40px; display: block; box-sizing: border-box;}
+.f_right>ul>li>a>img{position: absolute; display: inline-block;}
+.sns_hover{opacity: 0;}
+.f_right>ul>li>a:hover .sns{display: none;}
+.f_right>ul>li>a:hover .sns_hover{opacity: 1;}
+.f_right>ul>li:hover{background-color: #354724; padding: 2px;}

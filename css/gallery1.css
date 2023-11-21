@@ -1,0 +1,131 @@
+*{margin: 0; padding: 0;}
+.slider1{
+	width: 500px;
+	height: 618px;
+}
+.slider1 .slick-slide> div{
+	margin: 20px;
+}
+.slider1 .slick-slide div img{
+	display: block;
+	width: 100%;
+}
+
+/* 시작 이미지 꾸미기 */
+.slider1 .slick-current> div{
+	margin: 10px 10px;
+	/* transition: all 1s; */
+}
+
+/*이동버튼 꾸미기*/
+.slider1 .slick-prev:before, 
+.slider1 .slick-next:before{
+	content:'';/*원래 버튼 없애기*/
+}
+.slider1 .slick-prev,
+.slider1 .slick-next{
+	width:27px;
+	height:50px;
+}
+.slider1 .slick-prev{
+	background:url() no-repeat;
+	left:-50px;
+}
+.slider1 .slick-prev:hover{
+	background:url() no-repeat;
+}
+.slider1 .slick-next{
+	background:url(../images/button_right.png) no-repeat;
+	right:-800px;
+}
+.slider1 .slick-next:hover{
+	background:url(../images/button_right_hover.png) no-repeat;
+	right: -805px;
+}
+
+/*블릿버튼 꾸미기*/
+.slider1 .slick-dots li button::before{
+	content: '';/*원래 버튼 없애기*/
+}
+
+/*.slider1 .slick-dots li button{
+	width:10px;
+	height:10px;
+	padding:0;
+	background:pink;
+	border-radius:50%;
+	opacity: 0.5;
+}
+.slider1 .slick-dots li.slick-active button{
+	background:pink;
+	opacity:1
+}*/
+
+/*사진영역*/
+.slider2{
+	width: 510px;
+	/* margin: 0px auto; */
+}
+.slider2 .slick-slide> div{
+	margin: 0;
+}
+.slider2 .slick-slide div img{
+	display: block;
+}
+
+/* 시작 이미지 꾸미기 */
+.slider2 .slick-current> div{
+	margin: 10px 10px;
+	/* transition: all 1s; */
+}
+
+/*이동버튼 꾸미기
+.slider2 .slick-prev:before, 
+.slider2 .slick-next:before{
+	content:'';/*원래 버튼 없애기
+}
+.slider2 .slick-prev,
+.slider2 .slick-next{
+	width:27px;
+	height:50px;
+}
+.slider2 .slick-prev{
+	background:url() no-repeat;
+	left:-50px;
+}
+.slider2 .slick-prev:hover{
+	background:url() no-repeat;
+}
+.slider2 .slick-next{
+	background:url(../images/button_right.png) no-repeat;
+	right:-50px;
+}
+.slider2 .slick-next:hover{
+	background:url(../images/button_right.png) no-repeat;
+}
+
+/*블릿버튼 꾸미기
+.slider2 .slick-dots li button::before{
+	content: '';/*원래 버튼 없애기
+}
+
+/*.slider2 .slick-dots li button{
+	width:10px;
+	height:10px;
+	padding:0;
+	background:pink;
+	border-radius:50%;
+	opacity: 0.5;
+}
+.slider2 .slick-dots li.slick-active button{
+	background:pink;
+	opacity:1
+}*/
+
+/*이동표시숫자영역*/
+.slider3{
+	width: 18.5px;
+}
+.slider2 .slick-slide> p{
+	margin: 0;
+}
