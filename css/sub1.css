@@ -1,0 +1,99 @@
+/*웹폰트연결*/
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunKm';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunKm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+body{font-family: 'Noto Sans KR', sans-serif; font-size: 20px; line-height: 32px; color: #181c14; font-weight: 300; background-color: #fffef8;}
+
+/*배너*/
+figure{width: 100%; height: 880px; box-sizing: border-box; overflow: hidden; position: relative;}
+figure>img{position: absolute; display: block;}
+figure>img:nth-child(2){display: inline-block; top: 40%; left: 50%; transform: translate(-50%,-40%); animation: opacity 1s linear;}
+figure>p{position: absolute; color: #fffef8; font-family: 'SCoreDream'; font-weight: 200; font-size: 30px; top: 54%; left: 50%; transform: translateX(-50%);}
+@keyframes opacity{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+/*배너글귀 타이핑효과*/
+figure>p{
+    border-right: #fffef8 1px solid;
+    white-space: nowrap;
+    animation: blink 1.5s infinite, typing 2s steps(22);
+    overflow: hidden;
+}
+@keyframes blink{
+    50%{border-color: transparent;}
+}
+@keyframes typing{
+    from{width: 0;}
+    to{width: 688px;}
+}
+
+/*brand story*/
+#brandstory{background-image: url(../images/sub1_bg1.jpg);}
+.bs_cen{width: 1360px; margin: auto; padding: 200px 0;}
+h1{font-family: 'Chosunilbo_myungjo'; font-size: 80px; line-height: normal; text-align: center;}
+.bs_maintext{font-size: 22px; line-height: 34px; text-align: center; margin: 50px 0 200px;}
+.bs_cen h2{font-family: 'SCoreDream'; font-size: 50px; font-weight: 500; line-height: normal;}
+.bs_text{margin-top: 15px;}
+.nat{width: 100%; display: flex;}
+.nat>li:nth-child(1){margin-right: 70px;}
+.nat>li:nth-child(2){margin-top: 80px;}
+.mwl{width: 100%; display: flex; justify-content: end; margin: 150px 0 180px;}
+.mwl>li:nth-child(1){margin: 70px 70px 0 0; text-align: right;}
+.cons_img{display: flex; justify-content: space-between;}
+.cons_img img{display: block;}
+.cons>li:nth-child(2){margin-top: 70px; text-align: center;}
+
+/*BI STORY*/
+#bi{padding: 200px 0 100px;}
+#bi h1{margin-bottom: 100px;}
+.mainlogo{width: 100%; padding: 80px 0; text-align: center; background: url(../images/bi_bg1.png);}
+.mainlogo img{display: inline-block;}
+.bi_cen{width: 1360px; margin: auto;}
+.bi_img{width: 900px; margin: 100px auto 60px; box-sizing: border-box;}
+.bi_img ul{display: flex; padding: 0 30px; justify-content: space-between;}
+.bi_img li{width: 170px; height: 170px; box-sizing: border-box; position: relative; border-radius: 150px; overflow: hidden;}
+.bi_img li>img{position: absolute;}
+.bi_imghover{position: absolute; width: 170px; height: 170px; box-sizing: border-box; text-align: center; background-color: rgba(24, 28, 20, 0.4); display: none;}
+.bi_imghover>img{display: inline-block; position: absolute; top: 40%; transform: translate(-50%,-40%);}
+.bi_imghover>p{font-size: 22px; font-weight: 500; color: #fffef8; transform: translateY(105px);}
+.bi_img li:hover .bi_imghover{display: block;}
+.dictonary{font-size: 20px; font-weight: 500; line-height: 30px; display: inline-block; transform: translateX(373px); margin-bottom: 80px;}
+.bi_text{text-align: center;}
+#bi h3{font-family: 'SCoreDream'; font-size: 50px; font-weight: 500; text-align: center; margin: 150px auto;}
+.sublogo{width: 100%; display: flex; box-sizing: border-box; padding: 0 15px; justify-content: space-between; height: 380px;}
+.sublogo1, .sublogo2{width: 650px; position: relative;}
+.sublogo ul li{position: absolute;}
+.sublogo_img{width: 280px; height: 280px; background: url(../images/bi_bg2.png); border-radius: 200px; overflow: hidden; text-align: center;}
+.sublogo_img>img{display: inline-block; transform: translateY(60px);}
+.sublogo2>ul>.sublogo_img>img{transform: translateY(55px);}
+.sublogo1>ul>li:nth-child(2), .sublogo2>ul>li:nth-child(2){top: 190px; left: 36%;}
+
+/*흘러가는 글자*/
+#effect_text{width: 100%; height: 180px; box-sizing: border-box; overflow: hidden; margin-top: 50px;}
+#effect_text div{position: relative; width: 100%; height: 115px; padding: 0 50px; animation: wave 14s linear infinite;  box-sizing: border-box; display: flex;}
+#effect_text div img{display: inline-block; padding: 0 20px;}
+@keyframes wave{
+    0%{left: 0;}
+    100%{left:-2540px;}
+}
+
+/*our promiss*/
+#promiss{background: url(../images/sub1_bg2.jpg) no-repeat; background-size: cover; padding: 200px 0 150px}
+.pro_cen{width: 1360px; margin: 150px auto 0; box-sizing: border-box; text-align: center;}
+.pro_img img{display: block;}
+.pro_text{text-align: center;}
+h4{font-family: 'SCoreDream'; font-size: 45px; line-height: normal; font-weight: 500; margin: 40px 0 50px;}

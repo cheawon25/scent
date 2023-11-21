@@ -1,0 +1,86 @@
+/*웹폰트연결*/
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunKm';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunKm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+body{font-family: 'Noto Sans KR', sans-serif; font-size: 20px; line-height: 32px; color: #181c14; font-weight: 300; background-color: #fffef8;}
+
+/*배너*/
+figure{width: 100%; height: 880px; background: url(../images/product_banner.png) no-repeat; background-size: cover; box-sizing: border-box; color: #fffef8; text-align: center; padding-top: 345px;}
+h1{font-family: 'Chosunilbo_myungjo'; font-size: 120px; line-height: normal; margin-bottom: 35px; animation: opacity 1s linear; transform: translateY();}
+figure>p{font-family: 'SCoreDream'; font-size: 30px; font-weight: 300; display: inline-block;}
+@keyframes opacity{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+/*배너글귀 타이핑효과*/
+@keyframes blink{
+    50%{border-color: transparent;}
+}
+@keyframes typing{
+    from{width: 0;}
+    to{width: 625px;}
+}
+figure>p{
+    border-right: #fffef8 1px solid;
+    white-space: nowrap;
+    animation: blink 1.5s infinite, typing 2s steps(20);
+    overflow: hidden;
+}
+
+/*제품*/
+#product{width: 100%;}
+.prod_cen{width: 1360px; margin: 150px auto; box-sizing: border-box;}
+/*제품 네비게이션바*/
+.product_nav{display: flex; width: 910px; font-family: 'Chosunilbo_myungjo'; font-size: 35px; line-height: normal; margin: 0 auto 70px; color: #aaa; justify-content: space-between; font-weight: bold;}
+.product_nav li a{color: #aaa;}
+.product_nav>li>a:hover{color: #181c14;}
+.product_nav .active a{color: #181c14;}
+.prod_solid{
+    width:100%;
+    margin: 5px auto;
+    height: 2px;
+    background:#181c14;
+    visibility:hidden;
+    transform:scaleX(0);
+    transform-origin: left;
+    transition-property:opacity, transform;
+    transition-duration:1s;
+}
+.product_nav>li>a:hover .prod_solid{
+    transform: scaleX(1); visibility: visible;
+}
+/*제품필터*/
+.filter_content{width: 100%; box-sizing: border-box; display: flex; flex-wrap: wrap;}
+.filter_content>div{width: 430px; height: 580px; margin-top: 40px;}
+.img{width: 430px; height: 395px; box-sizing: border-box; position: relative;}
+.img img{display: block;}
+.product1 .img>img:nth-child(1){position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);}
+.product2 .img>img:nth-child(1){position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);}
+.product3 .img>img:nth-child(1){position: absolute; bottom: 10px; left: 60%; transform: translateX(-55%);}
+.product4 .img>img:nth-child(1){position: absolute; bottom: 10px; left: 51%; transform: translateX(-50%);}
+.space{margin: 0 30px;}
+.img>.hover{position: absolute; border-radius: 50%; bottom: 30px; left: 50%; transform: translateX(-50%); overflow: hidden; width: 280px; height: 280px; opacity: 0;}
+.img>.hover>img{width: 100%;}
+.filter_content>div:hover .img>img:nth-child(1){display: none; transition: all 1.5s linear;}
+.filter_content>div:hover .img>.hover{opacity: 1; transition: all 1.5s linear;}
+.filter_content>div:hover{background-color: #f9f6e4; transition: all 1.5s linear;}
+.text{text-align: center; padding-top: 38px; text-transform: uppercase;}
+.cartegory{font-family: 'SCoreDream'; font-size: 15px; font-weight: 400; display: inline-block; padding: 5px 10px; line-height: normal; color: #fffef8;}
+.Perfume{background-color: #c9ad2f;}
+.Bath{background-color: #889f72;}
+.Home{background-color: #354724;}
+.product_title{margin-top: 15px; line-height: normal; font-family: 'SCoreDream'; font-size: 22px; font-weight: 400;}
+.product_text{line-height: normal;}
