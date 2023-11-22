@@ -16,7 +16,7 @@
 
 *{margin: 0; padding: 0;}
 ul{list-style: none;}
-body{font-family: 'SCoreDream'; font-size: 22px; line-height: 34px; color: #181c14; background-color: #fffef8;}
+body{font-family: 'SCoreDream'; font-size: 22px; line-height: 34px; color: #181c14; background-color: #fffef8; min-width: 1520px;}
 
 figure{width: 100%; overflow: hidden;}
 figure>img{display: block;}

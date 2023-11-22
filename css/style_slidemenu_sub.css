@@ -15,10 +15,9 @@ input[id="menuicon"]+label{
 	display:block;
 	width: 40px;
 	height:28px;
-	position:fixed;
+	position:relative;
 	z-index:2;
-	top: 30px;
-	right: 10%;
+	margin-top: 10px;
 	transition:all 0.5s;
 	cursor:pointer;
 }
@@ -82,10 +81,9 @@ input[id="menuicon_h"]+label{
 	display:block;
 	width: 40px;
 	height:28px;
-	position:fixed;
+	position:relative;
 	z-index:3;
-	top: 30px;
-	right: 10%;
+	margin-top: 10px;
 	transition:all 0.5s;
 	cursor:pointer;
 }
