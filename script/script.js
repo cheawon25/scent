@@ -1,6 +1,9 @@
 $(function(){
-    $(".menu>li").hover(function(){
-        $("#h_hover").stop().slideToggle(200);
+    $(".menu>li").mouseover(function(){
+        $("#h_hover").stop().slideDown(200);
+    });
+    $(".menu>li").mouseout(function(){
+        $("#h_hover").stop().slideUp(200);
     });
 });
 
