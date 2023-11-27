@@ -34,7 +34,7 @@ body::-webkit-scrollbar-track {/*스크롤바 막대 외부*/
 ul{list-style: none;}
 a{text-decoration: none; color: #181c14;}
 .menu a, .lan a{text-decoration: none; color: #fffef8;  text-transform: uppercase;}
-header{width: 100%; height: 80px; box-sizing: border-box; position: absolute;}
+header{width: 100%; height: 80px; box-sizing: border-box; position: absolute; z-index: 99;}
 .header_cen{width: 1520px; margin: 0 auto; padding-top: 20px; display: flex; box-sizing: border-box; justify-content: space-between;}
 .logo{width: 130px;}
 .logo_white{display: inline-block;}
